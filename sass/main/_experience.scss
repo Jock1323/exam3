@@ -118,23 +118,24 @@
         padding-right: 15px;
     }
 }
+@media only screen and(max-width:480px){
+    .experience__title{
+        max-width: 392px;
+        margin-left: auto;
+        font-size: 28px;
+        line-height: 37px;
+    }
+    .experience__subtitle {
+        max-width: 390px;
+        margin-left: auto;
+    }
+}
 
 @media only screen and(max-width:450px) {
     .experience__info {
         margin-left: auto;
         margin-right: auto;
     }
-
-    .experience__title {
-        max-width: 392px;
-        margin-left: auto;
-    }
-
-    .experience__subtitle {
-        max-width: 390px;
-        margin-left: auto;
-    }
-
     .experience-cards {
         display: flex;
         flex-direction: column;

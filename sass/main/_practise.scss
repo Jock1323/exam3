@@ -1,0 +1,42 @@
+.practise{
+    padding-top: 100px;
+    &__container{
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__title{
+        margin-bottom: 16px;
+    }
+    &-cards{
+        margin-top: 50px;
+    }
+    .experience-card::before{
+        display: none;
+    }
+    .experience-card{
+        @include flex;
+        justify-content: center;
+        padding: 32px 62px;
+    }
+   @media only screen and(max-width:610px){
+       &__container{
+           justify-content: center;
+       }
+    .experience-cards{
+        @include flex;
+        flex-direction: column;
+    }
+    .experience-card{
+        display: block;
+        width: 100%;
+        max-width: 392px;
+    }
+   }
+   @media only screen and(max-width:480px){
+    .experience__info{
+        width: 100%;
+        max-width: 100%;
+    }
+   }
+    
+}
