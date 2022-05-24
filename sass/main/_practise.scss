@@ -1,5 +1,6 @@
 .practise{
     padding-top: 100px;
+    padding-bottom: 160px;
     &__container{
         display: flex;
         justify-content: flex-end;
@@ -18,6 +19,11 @@
         justify-content: center;
         padding: 32px 62px;
     }
+    @media only screen and(max-width:768px){
+        &{
+            padding-bottom: 80px;
+        }
+    }
    @media only screen and(max-width:610px){
        &__container{
            justify-content: center;
@@ -33,6 +39,9 @@
     }
    }
    @media only screen and(max-width:480px){
+    &{
+        padding-bottom: 60px;
+    }
     .experience__info{
         width: 100%;
         max-width: 100%;

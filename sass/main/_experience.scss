@@ -110,8 +110,7 @@
     }
 
     .experience-cards {
-        grid-template-columns: minmax(200px, 354px) minmax(200px, 354px);
-
+        grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr);
     }
 
     .experience-card {
