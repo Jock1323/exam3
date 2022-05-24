@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: 'Montserrat', sans-serif;
+}
 .container{
     width: 100%;
     max-width: 1300px;
@@ -15,7 +18,12 @@ a{
 ul,li{
     list-style-type: none;
 }
-body{
-    font-family: 'Montserrat', sans-serif;
+
+.section-title{
+    @include sectionTitle;
+    color:white;
+}
+.section-subtitle{
+    @include simpleText;
 }
 // font-family: 'STIX Two Text', serif;
