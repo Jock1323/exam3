@@ -1,0 +1,111 @@
+.message{
+    padding-top: 21px;
+    padding-bottom: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(to left, rgba(#DA4533,.1), rgba(#DA4533,.1)),
+        url('/images/message-bg.png');
+    &__inner{
+        @include flex;
+        justify-content: space-between;
+    }
+    &__info{
+        width: 100%;
+        max-width: 707px;
+    }
+    &__title{
+        @include sectionTitle;
+        color: #fff;
+    }
+    &__text{
+        margin-top: 16px;
+        color: #fff;
+    }
+    &__link{
+        margin-top: 44px;
+        position: relative;
+        @include flex;
+        text-align: center;
+        width: 300px;
+        height: 90px;
+        background-color: #1B1B1B;
+        border-radius: 50%;
+    }
+    &__link::before{
+        position: absolute;
+        content:"";
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        top: 0;
+        left: 0;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        transition: all .4s;
+    }
+    &__link:hover::before{
+        transform: matrix(0.99, -0.11, 0.11, 0.99, 0, 0);
+    }
+    &__img{
+        width: 100%;
+        max-width: 413px;
+        margin-left: 100px;
+    }
+    &__img img{
+        width: 100%;
+    }
+    @media only screen and(max-width:1000px){
+        &__info{
+            max-width: 630px;
+        }
+        &__title{
+            font-size: 38px;
+        }
+        &__img{
+            max-width:327px;
+            margin-left:25px;
+        }
+    }
+    @media only screen and(max-width:768px){
+        padding: 60px 0;
+        &__info{
+            max-width:486px;
+        }
+        &__title{
+            font-size: 32px;
+        }
+        &__img{
+            max-width:246px;
+            margin-left:16px;
+        }
+    }
+    @media only screen and(max-width:600px){
+        &__info{
+            max-width:100%;
+            text-align: center;
+        }
+        &__link{
+            margin-top: 25px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__img{
+            display: none;
+        }
+    }
+    @media only screen and(max-width:480px){
+        padding-bottom: 45px;
+        &__title{
+            font-size: 28px;
+            line-height:38px;
+        }
+    }
+    @media only screen and(max-width:400px){
+        padding-top: 40px;
+        padding-bottom: 25px;
+        &__title{
+            font-size: 24px;
+            line-height:32px;
+        }
+    }
+}

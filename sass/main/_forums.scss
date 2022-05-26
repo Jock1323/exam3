@@ -1,0 +1,142 @@
+.forums{
+    .line{
+        content:"";
+        width: 100%;
+        // background-color: linear-gradient(90deg, #8C8C8C 0%, rgba(140, 140, 140, 0.5) 55.16%, rgba(166, 166, 166, 0) 100.87%);
+        background-color:rgba(#5C5C5C,.4);
+        height: 1px;
+    }
+    padding-top: 75px;
+    &-title-block{
+        @include flex;
+        justify-content: space-between;
+    }
+    &__title{
+        font-size: 24px;
+        line-height: 39px;
+        color: #1B1B1B;
+    }
+    &__spans,
+    &__info{
+        @include flex;
+    }
+    &__span{
+        @include simpleText;
+        color: #5C5C5C;
+        transition: all .4s;
+    }
+    &__span+&__span{
+        margin-left: 66px;
+    }
+    &__span:hover{
+        color: #DA4533;
+    }
+    &__inner{
+        margin-top: 36px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__info-aside{
+        @include flex;
+    }
+    &__info{
+        width: 100%;
+        max-width: 445px;
+    }
+    &__img img{
+        mix-blend-mode: luminosity;
+    }
+    &__text{
+        margin-left: 15px;
+    }
+    &__inner-title{
+       @include simpleText;
+        color: #1B1B1B;
+    }
+    &__inner-text{
+        font-size: 14px;
+        line-height: 20px;
+        color: #5C5C5C;
+    }
+    &__info2{
+        width: 100%;
+        max-width: 495px;
+        margin: 0 27px;
+    }
+    &__info3{
+        width: 146px;
+        height: 146px;
+        @include flex;
+        justify-content: center;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        transition: all .4s;
+    }
+    &__info3:hover{
+        border-color: #DA4533;
+    }
+    &__info2-title,
+    &__info3-title{
+        position: relative;
+        @include infoText;
+        font-weight: 500;
+    }
+    &__info2-title::after{
+        position: absolute;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-image: linear-gradient(90deg, #DA4533 0%, rgba(218, 69, 51, 0) 100.87%);
+    }
+    &__info2-text,
+    &__info3-text{
+        @include simpleText;
+        color: #5C5C5C;
+    }
+    &__info3-text{
+        text-align: center;
+    }
+    @media only screen and (max-width:768px){
+        &__title{
+            font-size: 22px;
+            
+        }
+    }
+    @media only screen and (max-width:640px){
+       &__inner{
+           flex-direction: column;
+           justify-content: flex-start;
+       }
+    }
+    @media only screen and (max-width:500px){
+        &__title{
+            font-size: 20px;
+            
+        }
+        &__inner{
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        &__span+&__span{
+            margin-left:26px;
+        }
+    }
+    @media only screen and (max-width:430px){
+        &-title-block{
+            display: block;
+        }
+        &__spans{
+            margin-top: 16px;
+        }
+        &__info-aside{
+            flex-direction: column;
+            align-items:flex-start;
+            justify-content: flex-start;
+        }
+        &__info2{
+            margin: 0;
+            margin-top: 10px;
+        }
+    }
+}
