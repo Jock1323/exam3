@@ -1,8 +1,7 @@
 .result{
-    // display: none;
+    display: none;
     position: relative;
     padding-top: 160px;
-    overflow:hidden;
     background-image:linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)),
     url('/images/big-bg-grey.png');
     height: 969px;
@@ -26,16 +25,13 @@
         display: none;
     }
     &-cards{
-        display: flex;
-        position: absolute;
-        left:calc(50% - 640px);
-        overflow-x: auto;
-        justify-content: flex-end;
+        @include flex;
         margin-top: 50px;
+        overflow-x: scroll;
+        gap: 20px;
     }
     &-card{
-        width: 100%;
-        width: 290px;
+        width: 500px;
         background-color: #1B1B1B;
         border-radius: 8px;
         padding: 0 20px 20px 20px;
@@ -43,9 +39,9 @@
         overflow: hidden;
         cursor: pointer;
     }
-        &-card:nth-child(n+2){
-            margin-left: 20px;
-        }
+        // &-card:nth-child(n+2){
+        //     margin-left: 20px;
+        // }
     &-card__arrow{
         display:flex;
         justify-content: flex-end;
@@ -97,13 +93,33 @@
         opacity: 1;
         visibility:visible;
     }
-    @media only screen and(max-width:1000px){
+    @media only screen and (max-width:1280px){
         &__scroll{
             display: none;
         }
         &__hidden{
             display: block;
         }
+        &-cards{
+            display: flex;
+            position: absolute;
+            left:calc(50% - 640px);
+            overflow-x: auto;
+            justify-content: flex-end;
+            margin-top: 50px;
+        }
+        &-card{
+            width: 100%;
+            width: 290px;
+            background-color: #1B1B1B;
+            border-radius: 8px;
+            padding: 0 20px 20px 20px;
+            height: 420px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+    }
+    @media only screen and(max-width:1000px){
         &-cards{
             position: static;
             justify-content: center;
